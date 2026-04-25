@@ -410,7 +410,7 @@ export default function Home() {
             </p>
             <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:items-stretch">
               <address className="not-italic">
-                <div className="relative h-full overflow-hidden rounded-2xl border border-teal-100/80 bg-gradient-to-br from-teal-50/90 via-white to-cyan-50/40 p-6 shadow-lg shadow-teal-900/5 ring-1 ring-teal-500/5 sm:p-8">
+                <div className="relative h-full overflow-hidden rounded-2xl border border-teal-100/80 bg-gradient-to-br from-teal-50/90 via-white to-cyan-50/40 px-6 pb-10 pt-6 shadow-lg shadow-teal-900/5 ring-1 ring-teal-500/5 sm:p-8">
                   <div
                     className="pointer-events-none absolute -right-6 top-0 h-32 w-32 rounded-full bg-cyan-200/30 blur-2xl"
                     aria-hidden
@@ -433,10 +433,10 @@ export default function Home() {
                   >
                     {PHONE_DISPLAY}
                   </a>
-                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:items-stretch sm:pb-0">
                     <a
                       href={`tel:${PHONE_TEL}`}
-                      className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-teal-600 to-teal-800 text-sm font-semibold text-white shadow-md transition hover:shadow-lg"
+                      className="inline-flex h-12 min-h-12 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-teal-600 to-teal-800 text-sm font-semibold text-white shadow-md transition hover:shadow-lg sm:w-auto sm:flex-1"
                     >
                       <svg
                         className="h-4 w-4"
@@ -457,7 +457,7 @@ export default function Home() {
                       href={mapHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full border-2 border-teal-200/90 bg-white/80 text-sm font-semibold text-teal-900 transition hover:border-cyan-300/80"
+                      className="inline-flex h-12 min-h-12 w-full shrink-0 items-center justify-center gap-2 rounded-full border-2 border-teal-200/90 bg-white/80 text-sm font-semibold text-teal-900 transition hover:border-cyan-300/80 sm:w-auto sm:flex-1"
                     >
                       Open in Maps
                     </a>
