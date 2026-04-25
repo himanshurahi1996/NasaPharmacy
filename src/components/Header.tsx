@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/phone";
 
@@ -27,7 +28,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-teal-200/60 bg-white/80 shadow-[0_1px_0_0_rgba(45,212,191,0.12)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-teal-200/60 bg-teal-50/70 shadow-[0_1px_0_0_rgba(45,212,191,0.12)] backdrop-blur-xl">
       <div
         className="h-1 w-full bg-gradient-to-r from-teal-500 via-cyan-500 to-emerald-500"
         aria-hidden
@@ -35,21 +36,18 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link
           href="/"
-          className="group flex items-center gap-3 font-semibold text-teal-950"
+          className="group flex items-center font-semibold text-teal-950"
           onClick={() => setOpen(false)}
         >
-          <span
-            className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-teal-800 text-sm font-bold text-white shadow-lg shadow-teal-900/20 ring-2 ring-white/50 transition group-hover:shadow-teal-500/30"
-            aria-hidden
-          >
-            <span className="absolute -inset-0.5 rounded-2xl bg-gradient-to-t from-white/0 to-white/20 opacity-0 transition group-hover:opacity-100" />
-            <span className="relative z-10">N</span>
-          </span>
-          <span className="text-base tracking-tight sm:text-lg">
-            Nasa Pharmacy
-            <span className="mt-0.5 block text-[0.7rem] font-medium uppercase tracking-widest text-teal-600/80">
-              Adarsh Nagar · Sonipat
-            </span>
+          <span className="relative h-11 w-36 sm:h-12 sm:w-40">
+            <Image
+              src="/logo.png"
+              alt="Nasa Pharmacy"
+              fill
+              sizes="(max-width: 640px) 144px, 160px"
+              className="scale-125 object-contain"
+              priority
+            />
           </span>
         </Link>
 
